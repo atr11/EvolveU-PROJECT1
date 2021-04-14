@@ -27,4 +27,8 @@ and want to take pictures of all officially recognized
 "7 Wonders of the World" (New, not Ancient). You will
 begin in Calgary and must fly your way to various locations
 around the world to take the appropriate pictures, and then
-return safely back to Calgary.
+return safely back to Calgary. Successful completion of the 
+game will depend on whether or not you managed to capture
+pictures of all 7 wonders, and your final score is
+determined by how many "turns" you took to complete your
+journey.
