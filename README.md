@@ -20,15 +20,20 @@ http://localhost:3000
 
 Have Fun!
 
-
 -GAME DESCRIPTION-
-World Tour: 7 Wonders. You are an amateur photographer
-and want to take pictures of all officially recognized
-"7 Wonders of the World" (New, not Ancient). You will
-begin in Calgary and must fly your way to various locations
-around the world to take the appropriate pictures, and then
-return safely back to Calgary. Successful completion of the 
-game will depend on whether or not you managed to capture
-pictures of all 7 wonders, and your final score is
-determined by how many "turns" you took to complete your
-journey.
+You are an amateur photographer and have entered a
+'scavenger hunt' contest to take pictures of all
+officially recognized "7 Wonders of the World"
+(New, not Ancient) in the least possible amount of
+time. You will begin in Calgary and must fly your
+way to various locations around the world to take
+the appropriate pictures, and then return back to
+Calgary with pictures of all 7 Wonders on your camera.
+Each action you take will cost you one 'turn' (a
+flight between cities, sight-seeing, taking a picture).
+Each city has a limited number of destinations that are
+possible. See how quickly you can accomplish the task,
+by taking as few 'turns' as possible! Don't be afraid
+to take risks, but beware of potential dangers and the
+risk of getting injured.
+===

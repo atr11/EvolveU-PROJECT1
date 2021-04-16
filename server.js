@@ -1,4 +1,5 @@
 require('./model/locationDetails') // initialize all of the location descriptions
+//require('./model/userStats') // initialize user statistics
 
 const locationRoutes = require('./routes/sitesRouter')
 

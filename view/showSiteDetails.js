@@ -1,6 +1,9 @@
-
-function showSiteDetails(location, baseUrl) {
-    let details = "'World Tour: 7 Wonders'  .......  Click on <a href='" + baseUrl + "/location/Quit'>QUIT</a> to exit the game at any time.<br><br>" 
+function showSiteDetails(location, userStats, baseUrl) {
+    console.log("userStats Object = " + userStats)
+    let details = "'World Tour: 7 Wonders'  .......  Click on <a href='" + baseUrl + "/location/Quit'>QUIT</a> to exit the game at any time.<br><br>"
+    details += "# Turns Taken: " + userStats.turnCount + "<br>"
+    details += "# Injuries: " + userStats.injuryList + "<br>"
+    details += "Photos: " + userStats.cameraRoll + "<br><br>" 
     details += "++++++++++++++++++++++++++++++" + "<br>"
     details += location.description + "<br>"
     details += "++++++++++++++++++++++++++++++" + "<br><br>"
@@ -15,5 +18,3 @@ function showSiteDetails(location, baseUrl) {
 }
 
 module.exports = showSiteDetails
-
-//response.send("Hello World! Click <a href='/forest'>HERE</a> to go to the FOREST.")

@@ -1,13 +1,17 @@
 let locations = {}
 
-async function structureScenario(siteId, description, options) {
+async function structureScenario(siteId, description, costOfTurn, injuryName, PhotoName, WonderYN, options) {
     if (!options) {
         options = []
     }
     locations[siteId] = {
         siteId, 
         description, 
-        options
+        costOfTurn,
+        injuryName,
+        PhotoName,
+        WonderYN,
+        options,
     }
 }
 

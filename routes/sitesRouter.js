@@ -1,50 +1,46 @@
 const express = require('express')
-
 const sites = require('../model/locationList')
+const userStatsObj = require('../model/userStats')
 const showSiteDetails = require('../view/showSiteDetails')
 
 let router = express.Router()
 
 router.get('/:siteId', async (request, response) => {
     let siteId = request.params.siteId
+    let userID = 0
+    
     try {
         let site = await sites.findLocationById(siteId)
-        
+        let statsRecord = await userStatsObj.findStatsRecordByID(userID)
+        if (siteId === "Start"){ //Reset/create new stats
+            console.log("Starting new game!")
+            console.log("statsRecord = " + statsRecord)
+            if (statsRecord){
+                console.log("statsRecord = " + statsRecord)
+                console.log("Old Stats Record exists, attempting to delete it.")
+                let recordDeleted= await userStatsObj.deleteStatsRecord(statsRecord.recordID)
+            }
+            console.log("About to create new Stat List! userID = " + userID)
+            userID = await userStatsObj.createNewStats()
+            statsRecord = await userStatsObj.findStatsRecordByID(userID)
+        }
+    
+        console.log("site.costOfTurn = " + site.costOfTurn)
+        if(site.costOfTurn === 1){
+            //update TurnCount, increment by 1
+            console.log("We need to update the TurnCount!")
+            statsRecord.turnCount += 1
+            console.log("Turn count is now = " + statsRecord.turnCount)
+        }
+
         response.type('html')
-        response.send(showSiteDetails(site, "http://localhost:3000"))
-        
-        //response.send("I really like this.<br>Isn't it cool?<br> byebye!<br><br> <a href='/Calgary'>CLICKHERE</a>")
-
-        //response.write(showSiteDetails(site, "http://localhost:3000"))
-        //response.end()
-
-        //response.write(site.description + "\n\n")
-        //if (site.options.length > 0) {
-        //    site.options.forEach((option) => {
-        //        response.write(option.option + "\n")
-        //    })
-        //}
-        //response.write("\n")
-        //response.end()
+        response.send(showSiteDetails(site, statsRecord,"http://localhost:3000"))
     }
     catch (error) {
         console.log(error)
-        response.status(404).send("Scene " + siteID + " not found.\n")
-        response.send("Scene " + siteId + " not found.\n")
+        response.status(404).send("Location " + siteID + " not found.\n")
+        response.send("Location " + siteId + " not found.\n")
     }
 })
 
 module.exports = router
-
-/* function showSiteDetails(location, baseUrl) {
-    let details = location.description + "\n\n"
-    if (location.options.length > 0) {
-        location.options.forEach((option) => {
-            details += "\n" + option.option + " go to: "+baseUrl+"/location/"+option.location+"\n\n"
-        })
-    }
-    return details
-}
-
-*/
-
