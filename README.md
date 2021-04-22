@@ -1,4 +1,4 @@
-# EvolveU Project 1 - MEDIUM - Art Treleaven
+# EvolveU Project 1 - MILD - Art Treleaven
 
 "World Tour: 7 Wonders"
 
