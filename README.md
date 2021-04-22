@@ -41,6 +41,10 @@ end to your epic road trip!
 ===
 
 CREDITS
+
+Tony Enerson, for his skyrim CYOA demo, which provided the
+basis for the scene/location logic in this game.
+
 Many descriptions of the cities and places mentioned in
 this game were merely copied directly from the following
 sources:
