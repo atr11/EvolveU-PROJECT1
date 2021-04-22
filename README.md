@@ -10,8 +10,10 @@ Location of Project: https://github.com/atr11/EvolveU-Project1
 Once you have cloned this repository to your computer,
 use a terminal (bash) to navigate to the correct folder
 and then perform the following commands:
+
 => npm install
 => npm start
+
 ```
 Once the Express server starts and begins to 'listen',
 use your favorite web browser to play the game by
