@@ -5,40 +5,71 @@ const showSiteDetails = require('../view/showSiteDetails')
 
 let router = express.Router()
 
-router.get('/:siteId', async (request, response) => {
+
+//router.post('/:statsfile', async (request, response) => {
+//}
+
+//Delete Stats record when user clicks "Quit"
+//router.delete('/:statsfile', async (request, response) => {
+//}
+
+//Update stats record when...
+//router.put() {
+//}
+
+
+router.get('/:siteId', (request, response) => {
     let siteId = request.params.siteId
     let userID = 0
     
     try {
-        let site = await sites.findLocationById(siteId)
-        let statsRecord = await userStatsObj.findStatsRecordByID(userID)
+        let site = sites.findLocationById(siteId)
+        let statsRecord = userStatsObj.findStatsRecordByID(userID)
+        
         if (siteId === "Start"){ //Reset/create new stats
             console.log("Starting new game!")
-            console.log("statsRecord = " + statsRecord)
             if (statsRecord){
-                console.log("statsRecord = " + statsRecord)
                 console.log("Old Stats Record exists, attempting to delete it.")
-                let recordDeleted= await userStatsObj.deleteStatsRecord(statsRecord.recordID)
+                let recordDeleted= userStatsObj.deleteStatsRecord(statsRecord.recordID)
             }
-            console.log("About to create new Stat List! userID = " + userID)
-            userID = await userStatsObj.createNewStats()
-            statsRecord = await userStatsObj.findStatsRecordByID(userID)
+            console.log("Attempting to create new Stats record...")
+            userID = userStatsObj.createNewStats()
+            statsRecord = userStatsObj.findStatsRecordByID(userID)
         }
-    
-        console.log("site.costOfTurn = " + site.costOfTurn)
-        if(site.costOfTurn === 1){
-            //update TurnCount, increment by 1
-            console.log("We need to update the TurnCount!")
-            statsRecord.turnCount += 1
-            console.log("Turn count is now = " + statsRecord.turnCount)
+
+        console.log("InjuryList has " + statsRecord.injuryList.length + " items.")
+        if (statsRecord.injuryList.length > 2){  //Re-route to game's end after 3rd injury.
+            site = sites.findLocationById("InjuryEnd")
+        }
+        
+        if(site.costOfTurn > 0){
+            //update TurnCount, increment by location's turnCount value.
+            statsRecord.turnCount += site.costOfTurn
+        }
+
+        if(site.injuryName > ""){
+            console.log("injuryName = " + site.injuryName)
+            //update list of injuries
+            statsRecord.injuryList.push(site.injuryName)
+        }
+
+        if(site.photoName > ""){
+            if(site.wonderYN === "Y"){
+                let indexOfPhotoInList = statsRecord.cameraRoll.indexOf(site.photoName)
+                if(indexOfPhotoInList === -1){
+                    statsRecord.numberWondersFound += 1
+                }
+            }
+            //update list of photos in cameraRoll
+            statsRecord.cameraRoll.push(site.photoName)
         }
 
         response.type('html')
-        response.send(showSiteDetails(site, statsRecord,"http://localhost:3000"))
+        response.send(showSiteDetails(site, statsRecord,"http://localhost:3000"))   
     }
     catch (error) {
         console.log(error)
-        response.status(404).send("Location " + siteID + " not found.\n")
+        response.status(404).send("Location " + siteId + " not found.\n")
         response.send("Location " + siteId + " not found.\n")
     }
 })

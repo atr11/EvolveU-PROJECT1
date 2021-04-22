@@ -6,6 +6,7 @@ This is an Express based game written in JS, designed to be played using
 a web browser (ex. Chrome, Safari, FireFox).
 
 -GETTING STARTED-
+Location of Project: https://github.com/atr11/EvolveU-Project1
 Once you have cloned this repository to your computer,
 use a terminal (bash) to navigate to the correct folder
 and then perform the following commands:
@@ -35,5 +36,6 @@ Each city has a limited number of destinations that are
 possible. See how quickly you can accomplish the task,
 by taking as few 'turns' as possible! Don't be afraid
 to take risks, but beware of potential dangers and the
-risk of getting injured.
+risk of getting injured. Three injuries will put an
+end to your epic road trip!
 ===

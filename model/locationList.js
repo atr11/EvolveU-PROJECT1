@@ -1,6 +1,6 @@
 let locations = {}
 
-async function structureScenario(siteId, description, costOfTurn, injuryName, PhotoName, WonderYN, options) {
+function structureScenario(siteId, description, costOfTurn, injuryName, photoName, wonderYN, options) {
     if (!options) {
         options = []
     }
@@ -9,13 +9,13 @@ async function structureScenario(siteId, description, costOfTurn, injuryName, Ph
         description, 
         costOfTurn,
         injuryName,
-        PhotoName,
-        WonderYN,
+        photoName,
+        wonderYN,
         options,
     }
 }
 
-async function findLocationById(siteId) {
+function findLocationById(siteId) {
     let site = locations[siteId]
     if (!site) {
         throw new Error("Location " + siteId + " does not exist!")
