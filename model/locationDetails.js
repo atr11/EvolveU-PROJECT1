@@ -579,8 +579,8 @@ location.structureScenario("AustraliaSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "SYDNEY OPERA HOUSE", location: "AUSSydneyOpera"},
-    { option: "", label: "HARBOUR BRIDGE", location: "AUSSydneyHarbourBridge"},
+    { option: "Head straight to the", label: "SYDNEY OPERA HOUSE", location: "AUSSydneyOpera"},
+    { option: "Go for a stroll to the", label: "HARBOUR BRIDGE", location: "AUSSydneyHarbourBridge"},
 ])
 location.structureScenario("AUSSydneyOpera", 
 `The Sydney Opera House is one of the most-photographed buildings in the world,
@@ -655,7 +655,7 @@ the name). The Forbidden City was declared a World Heritage Site in 1987. The co
 consists of 980 buildings, encompassing 8,886 rooms and covering 7,800,000 sq ft.
 It is listed by UNESCO as the largest collection of preserved ancient wooden structures
 in the world. Oh, you have GOT to take a picture of THIS! CLICK.`
-,1,"","The Forbidden City","N",
+,1,"","Forbidden City","N",
 [
     { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "China"},
     { option: "If you want to visit the other sight, click on", label: "GREAT WALL", location: "CHNGreatWall"},
@@ -668,24 +668,39 @@ location.structureScenario("RussiaSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Take a tour of magnificent", label: "RED SQUARE", location: "RUSRedSquare"},
+    { option: "Seek culture and refinement at the", label: "BOLSHOI THEATRE", location: "RUSBolshoiTheatre"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("RUSRedSquare", 
+`Red Square is one of the oldest and largest squares in Moscow, the capital of
+Russia. Owing to its historical significance and the adjacent historical buildings,
+it is regarded as one of the most famous squares in Europe and the world. It is
+located in Moscow's historic centre, in the eastern walls of the Kremlin. It is the
+city landmark of Moscow, with iconic buildings such as Saint Basil's Cathedral,
+Lenin's Mausoleum and the GUM. In addition, it has been a UNESCO World Heritage Site
+since 1990. So much amazing history here, and St Basil's makes an iconic backdrop for
+your latest selfie. Say cheese! CLICK.`
+,1,"","Red Square","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Russia"},
+    { option: "If you want to visit the other sight, click on", label: "BOLSHOI THEATRE", location: "RUSBolshoiTheatre"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("RUSBolshoiTheatre", 
+`The Bolshoi Theatre is a historic theatre in Moscow, which holds ballet and opera
+performances. Before the October Revolution it was a part of the Imperial Theatres
+of the Russian Empire along with Maly Theatre in Moscow and a few theatres in Saint
+Petersburg. The Bolshoi Ballet and Bolshoi Opera are amongst the oldest and most
+renowned ballet and opera companies in the world. It is by far the world's biggest
+ballet company, with more than 200 dancers. The theatre is the parent company of
+The Bolshoi Ballet Academy, a world-famous leading school of ballet. The main building
+of the theatre, rebuilt and renovated several times during its history, is a landmark
+of Moscow and Russia. You are so impressed by your tour that you attempt to do your
+best dance impression of Mikhail Baryshnikov. You fail, miserably, and break your
+right clavicle in the process. OUCH! You go back to the airport to consider your
+options.`
+,1,"Broken Clavicle","","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To continue, click on", label: "CONTINUE", location: "Russia"},
 ])
 
 //-----------------------
@@ -695,24 +710,42 @@ location.structureScenario("IndiaSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Go visit the famed", label: "TAJ MAHAL", location: "INDTajMahal"},
+    { option: "Take a tour of the popular", label: "RED FORT", location: "INDRedFort"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("INDTajMahal", 
+`Congratulations, you've discovered one of the 'Seven Wonders of the World!'
+This mausoleum complex in Agra, India, is regarded as one of the world’s most iconic
+monuments and is perhaps the finest example of Mughal architecture. The Taj Mahal was
+built by Emperor Shah Jahān (reigned 1628–58) to honor his wife Mumtāz Maḥal (“Chosen
+One of the Palace”), who died in 1631 giving birth to their 14th child. It took about
+22 years and 20,000 workers to construct the complex, which includes an immense garden
+with a reflecting pool. The mausoleum is made of white marble that features semiprecious
+stones in geometric and floral patterns. You join the thousands of visitors in taking
+copious amounts of video, and of course the all important selfie with your camera.
+CLICK!`
+,1,"","Taj Mahal","Y",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "India"},
+    { option: "If you want to visit the other sight, click on", label: "RED FORT", location: "INDRedFort"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("INDRedFort", 
+`The massive Red Fort (or Lal Qila) stands rather forlornly, a sandstone carcass of its
+former self. In ages past, when Mughal Emperor Shah Jahan paraded out of the fort atop
+an elephant into the streets of Old Delhi, he and the fort that he built were a
+grandiose display of pomp and power. The walls of the fort extend for 2 kilometers and
+vary in height from 60 ft on the river side to 110 ft on the city side. Shah Jahan began
+construction of the massive fort in 1638 and it was completed in 1648. Shah Jahan never
+completely moved his capital from Agra to his new city of Shahjahanabad in Delhi because
+he was deposed and imprisoned in Agra Fort by his sly son Aurangzeb. The Red Fort dates
+from the very peak of Mughal power. Their reign from Delhi was a short one, however;
+Aurangzeb was the first and last great Mughal emperor to rule from here. The 33 ft deep
+moat has been bone-dry since 1857. This will make yet another great photo for your
+album. Fix your hair and smile, CLICK!`
+,1,"","Red Fort","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "India"},
+    { option: "If you want to visit the other sight, click on", label: "TAJ MAHAL", location: "INDTajMahal"},
 ])
 
 //-----------------------
@@ -722,24 +755,42 @@ location.structureScenario("EgyptSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Head straight for the", label: "GREAT PYRAMID OF GIZA", location: "EGYPTPyramidsGiza"},
+    { option: "Follow a group of tourists to the", label: "GREAT SPHINX OF GIZA", location: "EGYPTSphynx"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("EGYPTPyramidsGiza", 
+`The Great Pyramid of Giza (also known as the Pyramid of Khufu or the Pyramid of
+Cheops) is the oldest and largest of the pyramids in the Giza pyramid complex bordering
+present-day Giza in Greater Cairo, Egypt. It is the oldest of the Seven Wonders of the
+Ancient World, and the only one to remain largely intact. Even though this is not
+officially recognized as one of the "NEW 7 Wonders of the World", it certainly has
+honorary status.
+You have dreamed of this day, and now you will have a selfie to prove that you were
+here. CLICK!`
+,1,"","Great Pyramid of Giza","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Egypt"},
+    { option: "If you want to visit the other sight, click on", label: "GREAT SPHINX OF GIZA", location: "EGYPTSphynx"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("EGYPTSphynx", 
+`The Great Sphinx of Giza is a limestone statue of a reclining sphinx, a mythical
+creature, standing on the Giza Plateau on the west bank of the Nile in Giza, Egypt.
+The face of the Sphinx is generally believed to represent the pharaoh Khafre. Cut
+from the bedrock, the original shape of the Sphinx has been restored with layers of
+limestone blocks. It measures 240 ft long from paw to tail, 66 ft high from the base
+to the top of the head and 62 ft wide at its rear haunches. It is the oldest known
+monumental sculpture in Egypt and is commonly believed to have been designed, sculpted,
+and constructed by ancient Egyptians of the Old Kingdom during the reign of the pharaoh
+Khafre.
+Deciding you need to step back further for a better shot of this massive
+sculpture, you accidentally step on another tourists foot, rupturing your achilles
+tendon! Rushing to your aid, a Canadian pilot from one of the many tour companies
+offers to fly you directly to Calgary for medical treatment if you wish. Is this luck,
+or a curse?`
+,1,"Ruptured Achilles","","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "If you ignore the pilot's offer and head back to the airport in Cairo, click on", label: "BACK TO AIRPORT", location: "Egypt"},
+    { option: "If you prefer to fly with the pilot to Calgary, click on", label: "CALGARY", location: "Calgary"},
 ])
 
 //-----------------------
@@ -749,24 +800,42 @@ location.structureScenario("JordanSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Visit ancient", label: "PETRA", location: "JORPetra"},
+    { option: "Take in the scenery at the", label: "DEAD SEA", location: "JORDeadSea"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("JORPetra", 
+`Congratulations, you've discovered one of the 'Seven Wonders of the World!'
+The ancient city of Petra, Jordan, is located in a remote valley, nestled among
+sandstone mountains and cliffs. It was purported to be one of the places where Moses
+struck a rock and water gushed forth. Later the Nabataeans, an Arab tribe, made it
+their capital, and during this time it flourished, becoming an important trade center,
+especially for spices. Noted carvers, the Nabataeans chiseled dwellings, temples, and
+tombs into the sandstone, which changed color with the shifting sun. In addition, they
+constructed a water system that allowed for lush gardens and farming. At its height,
+Petra reportedly had a population of 30,000. The city began to decline, however, as
+trade routes shifted. A major earthquake in 363 CE caused more difficulty, and after
+another tremor hit in 551, Petra was gradually abandoned. Although rediscovered in 1912,
+it was largely ignored by archaeologists until the late 20th century.
+You've never seen anything quite like this, so intricately carved into such a seemlingly
+random and remote location. You are awe-struck as you snap another selfie. CLICK!`
+,1,"","Petra","Y",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Jordan"},
+    { option: "If you want to visit the other sight, click on", label: "DEAD SEA", location: "JORDeadSea"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("JORDeadSea", 
+`The Dead Sea is one of the saltiest bodies of water on Earth, with almost 10 times
+more salt than ordinary seawater. This salinity makes for a harsh environment in which
+plants and animals cannot flourish, hence its name. The Dead Sea has attracted visitors
+from around the Mediterranean Basin for thousands of years. It was one of the world's
+first health resorts (for Herod the Great), and it has been the supplier of a wide
+variety of products, from asphalt for Egyptian mummification to potash for fertilisers.
+After quickly dipping your aching feet in its 'healing' waters, you feel refreshed and
+snap a selfie pic for the album. CLICK!`
+,1,"","Dead Sea","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Jordan"},
+    { option: "If you want to visit the other sight, click on", label: "PETRA", location: "JORPetra"},
 ])
 
 //-----------------------
@@ -776,24 +845,43 @@ location.structureScenario("GreeceSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Head straight to the place everyone wants to see,", label: "THE ACROPOLIS", location: "GREAcropolis"},
+    { option: "Follow a group of tourists to", label: "DELPHI", location: "GREDelphi"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("GREAcropolis", 
+`The rock of the Acropolis, crowned by the dramatic ruins of the Parthenon, is one of
+the archetypal images of Western culture. The first time you see it, rising above the
+traffic or from a distant hill, is extraordinary: foreign, and yet utterly familiar. As
+in other Greek cities the Acropolis itself is simply the highest point of the city, and
+this steep-sided, flat-topped crag of limestone, rising abruptly 100m from its
+surroundings, has made it the focus of Athens during every phase of its development.
+Easily defensible and with plentiful water, its initial attractions are obvious. Even
+now, with no function apart from tourism, it is the undeniable heart of the city,
+around which everything else clusters, glimpsed at almost every turn. As well as the
+iconic Parthenon, the summit of the Acropolis is home to the Erechtheion, the Temple of
+Athena Nike and the Propylaia, as well as lesser remains of many other ancient
+structures. Knowing you will likely never get another chance to visit again, you eagerly
+reach to snap another photo with your well-used camera. CLICK!`
+,1,"","The Acropolis","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Greece"},
+    { option: "If you want to visit the other sight, click on", label: "DELPHI", location: "GREDelphi"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("GREDelphi", 
+`On the Greek mainland, Delphi is a UNESCO World Heritage site. Built on the lower
+slopes of Mount Parnassus, overlooking a dramatic ravine, the site was sacred to the
+ancients, who came here on pilgrimages to worship Apollo (god of light, prophecy, music,
+and healing) and to ask advice from the mythical Oracle. It is made up of the crumbling
+ruins of numerous temples, a theater, and stadium, dating from between the 8th century
+BC and the 2nd century AD.
+Taking in your surroundings, you are left gaping in awe at this large ancient
+amphitheatre. The steep hillside catches you off guard, and you fall to the ground,
+rolling several feet before you stop. That is, you are stopped by a large rock that has
+knocked the wind out of you and left you bleeding internally with a lacerated spleen.
+OUCH! No longer in the mood for a photo, you head straight back to the airport.`
+,1,"Lacerated Spleen","","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To continue, click on", label: "CONTINUE", location: "Greece"},
 ])
 
 //-----------------------
@@ -803,24 +891,35 @@ location.structureScenario("ItalySights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Follow the crowds to", label: "THE COLOSSEUM", location: "ITAColosseum"},
+    { option: "Take an art-appreciation tour of the", label: "SISTINE CHAPEL", location: "ITASistineChapel"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("ITAColosseum", 
+`Congratulations, you've discovered one of the 'Seven Wonders of the World!'
+The Colosseum in Rome was built in the first century by order of the Emperor Vespasian.
+A feat of engineering, the amphitheater measures 620 by 513 feet and features a complex
+system of vaults. It was capable of holding 50,000 spectators, who watched a variety of
+events - the most notable of which were gladiator fights. In addition, water was
+sometimes pumped into the Colosseum for mock naval engagements. According to some
+estimates, about 500,000 people died in the Colosseum.
+What an amazing feat! Aren't you glad you came all this way? Quick, take a picture
+before you wake up from this dream. CLICK!`
+,1,"","The Colosseum","Y",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Italy"},
+    { option: "If you want to visit the other sight, click on", label: "SISTINE CHAPEL", location: "ITASistineChapel"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("ITASistineChapel", 
+`The Sistine Chapel is a large chapel in the Vatican City. It is renowned for its
+Renaissance art, especially the ceiling painted by Michelangelo, and attracts more than
+5 million visitors each year.
+What an amazing image to catch on film!... but you have to be sneaky because they don't
+allow photos to be taken in the chapel. You'd better hope they don't catch you. CLICK!
+Ssshhhh, quiet!`
+,1,"","Sistine Chapel","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "Italy"},
+    { option: "If you want to visit the other sight, click on", label: "THE COLOSSEUM", location: "ITAColosseum"},
 ])
 
 //-----------------------
@@ -830,24 +929,32 @@ location.structureScenario("FranceSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Go where everyone goes, to the", label: "EIFFEL TOWER", location: "FRAEiffelTower"},
+    { option: "Visit priceless works of art at", label: "THE LOUVRE", location: "FRALouvre"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("FRAEiffelTower", 
+`The Eiffel Tower was the main exhibit of the Paris Exposition (World's Fair) of 1889.
+It was constructed to commemorate the centennial of the French Revolution and to
+demonstrate France's industrial prowess to the world. You manage a quick trip to the
+viewing platforms and then snap another photo for your camera roll. CLICK! Well done!`
+,1,"","Eiffel Tower","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "France"},
+    { option: "If you want to visit the other sight, click on", label: "THE LOUVRE", location: "FRALouvre"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("FRALouvre", 
+`The Louvre Museum is the world's largest art museum and a historic monument in Paris,
+France, and is best known for being the home of the Mona Lisa. A central landmark of
+the city, it is home to approximately 38,000 objects from prehistory to the 21st
+century. The museum is housed in the Louvre Palace, originally built as the Louvre
+castle in the late 12th to 13th century under Philip II. Remnants of the fortress
+are visible in the basement of the museum. So many amazing paintings and sculptures!
+A crowd has gathered around the Mona Lisa and in an effort to get a better view, you
+are elbowed in the head by another tourist and suffer a concussion. OUCH! Back to the
+airport you go.`
+,1,"Concussion","","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To continue, click on", label: "CONTINUE", location: "France"},
 ])
 
 //-----------------------
@@ -857,24 +964,39 @@ location.structureScenario("NewYorkSights",
 time, your choices are limited to the following. Click a link to choose: `
 ,0,"","","N",
 [
-    { option: "", label: "<SIGHT1>", location: "<Sight1Name>"},
-    { option: "", label: "<SIGHT2>", location: "<Sight2Name>"},
+    { option: "Follow the crowds of tourests to the", label: "STATUE OF LIBERTY", location: "NYStatueLiberty"},
+    { option: "Catch a live musical on", label: "BROADWAY", location: "NYBroadwayShow"},
 ])
-location.structureScenario("<Sight1Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("NYStatueLiberty", 
+`The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in
+New York Harbor within New York City, in the United States. The copper statue, built
+by Gustave Eiffel, was a gift from the people of France to the people of the United
+States. The statue was dedicated on October 28, 1886. The statue is a figure of
+Libertas, a robed Roman liberty goddess. She holds a torch above her head with her
+right hand, and in her left hand carries a tabula ansata inscribed JULY IV MDCCLXXVI,
+the date of the U.S. Declaration of Independence. A broken shackle and chain lie at her
+feet as she walks forward, commemorating the recent national abolition of slavery.
+After its dedication, the statue became an icon of freedom and of the United States,
+seen as a symbol of welcome to immigrants arriving by sea. 
+Of the many sites to see in New York, this is certainly one of the best. You decide to
+take a photo as a keepsake of your trip. CLICK!`
+,1,"","Statue of Liberty","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "NewYork"},
+    { option: "If you want to visit the other sight, click on", label: "BROADWAY", location: "NYBroadwayShow"},
 ])
-location.structureScenario("<Sight2Name>", 
-``
-,1,"<injuryName>","<photoname>","N",
+location.structureScenario("NYBroadwayShow", 
+`Broadway in Manhattan is known widely as the heart of the American commercial
+theatrical industry. Theatres here host a constantly changing variety of productions,
+including plays and musicals. Many people believe the theatrical productions on
+Broadway are the best in the world. Broadway shows are one of the most popular tourist
+attractions in New York City.
+Knowing this, you decide to catch a production of Hamilton! After the show, you take a
+selfie in front of the theatre's marquee. CLICK!`
+,1,"","Hamilton the Musical","N",
 [
-    { option: "To continue, click on", label: "CONTINUE", location: "<LocationName>"},
-    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "<LocationName>"},
-    { option: "If you want to visit the other sight, click on", label: "<OTHER SIGHT NAME>", location: "<OtherSightName>"},
+    { option: "To head back to the airport, click on", label: "BACK TO AIRPORT", location: "NewYork"},
+    { option: "If you want to visit the other sight, click on", label: "STATUE OF LIBERTY", location: "NYStatueLiberty"},
 ])
 
 //-----------------------

@@ -39,3 +39,14 @@ to take risks, but beware of potential dangers and the
 risk of getting injured. Three injuries will put an
 end to your epic road trip!
 ===
+
+CREDITS
+Many descriptions of the cities and places mentioned in
+this game were merely copied directly from the following
+sources:
+ - Google Maps
+ - Lonely Planet
+ - Trip Advisor
+ - Wikipedia
+
+
