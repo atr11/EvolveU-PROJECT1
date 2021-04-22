@@ -12,6 +12,7 @@ use a terminal (bash) to navigate to the correct folder
 and then perform the following commands:
 
 => npm install
+
 => npm start
 
 ```
