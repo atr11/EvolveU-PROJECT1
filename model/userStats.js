@@ -32,7 +32,8 @@ function listStatsRecords() {
 
 function findStatsRecordByID(recordNum) {
     if (statsList.length > 0) {
-        let statsRecord = statsList[recordNum]
+        let index = statsList.findIndex(x => x.recordID == recordNum)
+        let statsRecord = statsList[index]
         if (!statsRecord) {
             throw new Error("Record # " + recordNum + " does not exist!")
             console.log("Unable to find Stats Record # " + recordNum)

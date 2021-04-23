@@ -48,7 +48,6 @@ app.patch('/stats/modify/:recordNum', (request,response) => {
   let chgTurns = request.body.turnCount
   let chgInjuries = request.body.injuryList
   let chgWondercount = request.body.numberWondersFound
-  console.log("Patch method called, API ready to attempt update...")
   let chgResult = stats.updateStatsRecord(recIdToChg,chgPictures,chgTurns,chgInjuries,chgWondercount)
   if (chgResult === "Y") {
     response.send("Updated RecordId: " + recIdToChg)
