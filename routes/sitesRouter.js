@@ -5,19 +5,6 @@ const showSiteDetails = require('../view/showSiteDetails')
 
 let router = express.Router()
 
-
-//router.post('/:statsfile', async (request, response) => {
-//}
-
-//Delete Stats record when user clicks "Quit"
-//router.delete('/:statsfile', async (request, response) => {
-//}
-
-//Update stats record when...
-//router.put() {
-//}
-
-
 router.get('/:siteId', (request, response) => {
     let siteId = request.params.siteId
     let userID = 0
@@ -37,7 +24,6 @@ router.get('/:siteId', (request, response) => {
             statsRecord = userStatsObj.findStatsRecordByID(userID)
         }
 
-        console.log("InjuryList has " + statsRecord.injuryList.length + " items.")
         if (statsRecord.injuryList.length > 2){  //Re-route to game's end after 3rd injury.
             site = sites.findLocationById("InjuryEnd")
         }
@@ -69,8 +55,8 @@ router.get('/:siteId', (request, response) => {
     }
     catch (error) {
         console.log(error)
-        response.status(404).send("Location " + siteId + " not found.\n")
-        response.send("Location " + siteId + " not found.\n")
+        response.status(404).send("Location " + siteId + " or stats record not found.\n")
+        response.send("Location " + siteId + " or stats record not found.\n")
     }
 })
 

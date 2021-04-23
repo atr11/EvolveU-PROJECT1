@@ -1,4 +1,4 @@
-# EvolveU Project 1 - MILD - Art Treleaven
+# EvolveU Project 1 - MEDIUM - Art Treleaven
 
 "World Tour: 7 Wonders"
 
@@ -43,13 +43,48 @@ risk of getting injured. Three injuries will put an
 end to your epic road trip!
 ===
 
+++++++++++++++++++++++++++++++++++++++++++++++
+
+DEMONSTRATION OF HTTP METHODS
+
+GET
+Example 1: Listing ALL statistics records
+ =>$ curl http://localhost:3000/stats/list
+Example 2: Listing a specific statistics record by ID
+ =>$ curl http://localhost:3000/stats/list/0
+Example 3: Playing the game
+ =>$ curl http://localhost:3000/location/Start
+
+POST
+Example 1: Creating a brand new BLANK statistics record
+ =>$ curl -X POST http://localhost:3000/stats/createnew
+Example 2: Creating a new user-defined statistics record
+ =>$ curl -H "Content-Type: application/json" -X POST -d '{"cameraRoll":["Picture1","Picture2"],"turnCount":1,"injuryList":["concussed","brokenhand"],"numberWondersFound":7}' http://localhost:3000/stats/createspecific 
+
+DELETE
+Example 1: Delete a specific statistics record by ID
+ =>$ curl -X DELETE http://localhost:3000/stats/remove/0
+
+PATCH (Update)
+Example 1: Update all fields for a specific statistics record
+ =>$ curl -H "Content-Type: application/json" -X PATCH -d '{"cameraRoll":["Picture1","Picture2"],"turnCount":1,"injuryList":["concussed","brokenfoot"],"numberWondersFound":7}' http://localhost:3000/stats/modify/0
+Example 2: Update SOME fields for a specific statistics record  
+ =>$ curl -H "Content-Type: application/json" -X PATCH -d '{"cameraRoll":["Picture1","Picture2","Picture3"],"numberWondersFound":4}' http://localhost:3000/stats/modify/0 
+
+++++++++++++++++++++++++++++++++++++++++++++++
+#######################################################
+
 CREDITS
 
 Tony Enerson, for his skyrim CYOA demo, which provided the
 basis for the scene/location logic in this game.
 
+Top notch peer support from the Cohort6 gang!
+
+Endless web pages and blogs offering tips, especially StackOverflow and W3Schools.
+
 Many descriptions of the cities and places mentioned in
-this game were merely copied directly from the following
+this game were copied directly from the following
 sources:
  - Google Maps
  - Lonely Planet

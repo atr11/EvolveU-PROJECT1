@@ -10,12 +10,13 @@ function showSiteDetails(location, userStats, baseUrl) {
     if (location.siteId === "End"){
         if (userStats.numberWondersFound > 6){
             details += "CONGRATULATIONS, you've successfully completed the race!!!<br>"
-            details += "You took only " + userStats.turnCount + " turns, you should be proud." 
+            details += "You took only " + userStats.turnCount + " turns, and have "
+            details += "some amazing pictures to cherish - you should be proud!<br>" 
         } else {
             details += "As you scroll through the photos on your camera, you notice "
             details += "that you missed capturing " + (7 - userStats.numberWondersFound)
             details += " of the Wonders. Still, you are proud of what you've accomplished "
-            details += "and are eager to go back and visit the ones you missed." 
+            details += "and are eager to go back and visit the ones you missed.<br>" 
         }
     }
 
